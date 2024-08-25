@@ -5,18 +5,17 @@ public class ToLowerCase {
     public static String toLowerCase(String s) {
 
         StringBuilder result = new StringBuilder();
-        char ch;
 
         for (int i=0; i<s.length(); i++) {
-            if (s.charAt(i) >= 'A' && s.charAt(i)<= 'Z') {
-                ch = (char) (s.charAt(i) + 32);
+            char c = s.charAt(i);
+
+            if (c >= 'A' && c <= 'Z') {
+                result.append((char) (c + 32));
             }
             else {
-                ch = s.charAt(i);
+                result.append(c);
             }
-            result.append(ch);
         }
-
         return result.toString();
 
 //        return s.toLowerCase();
