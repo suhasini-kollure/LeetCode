@@ -12,11 +12,9 @@ public class MatrixDiagonalSum {
         int n = mat.length;
 
         for (int i=0; i<n; i++) {
-            if (i != n-i-1) {
-                sum += mat[i][i];
-                sum += mat[i][n-1-i];
-            } else {
-                sum += mat[i][i];
+            sum += mat[i][i]; // Add primary diagonal element
+            if (i != n - 1 - i) {
+                sum += mat[i][n - 1 - i]; // Add secondary diagonal element only if it's not the same element
             }
         }
         return sum;
