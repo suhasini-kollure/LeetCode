@@ -2,14 +2,14 @@ package com.programmingskils;
 
 public class CheckStraightLine {
     public static boolean checkStraightLine(int[][] coordinates) {
-        int xdiff = coordinates[1][0] - coordinates[0][0];
-        int ydiff = coordinates[1][1] - coordinates[0][1];
+        int xDiff = coordinates[1][0] - coordinates[0][0];
+        int yDiff = coordinates[1][1] - coordinates[0][1];
 
         for (int i = 2; i < coordinates.length; i++) {
-            int xCurrentdiff = coordinates[i][0] - coordinates[0][0];
-            int ycurrentdiff = coordinates[i][1] - coordinates[0][1];
+            int xCurrentDiff = coordinates[i][0] - coordinates[0][0];
+            int yCurrentDiff = coordinates[i][1] - coordinates[0][1];
 
-            if (xdiff * ycurrentdiff != ydiff * xCurrentdiff) {
+            if (xDiff * yCurrentDiff != yDiff * xCurrentDiff) {
                 return false;
             }
         }
