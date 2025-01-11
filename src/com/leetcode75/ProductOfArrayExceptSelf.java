@@ -16,7 +16,6 @@ public class ProductOfArrayExceptSelf {
             suffixProduct *= nums[i];
         }
         return result;
-
     }
 
     public static void main(String[] args) {
