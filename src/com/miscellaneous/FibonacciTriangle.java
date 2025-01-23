@@ -2,6 +2,8 @@ package com.miscellaneous;
 
 import java.util.Scanner;
 
+//the sequence of numbers in which each number in the sequence is equal to the sum of two numbers before it.
+
 public class FibonacciTriangle {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -20,6 +22,8 @@ public class FibonacciTriangle {
                 a = b;
                 b = next;
             }
+            System.out.println();
         }
+        scanner.close();
     }
 }
